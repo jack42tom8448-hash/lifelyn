@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F4D7D7" />
+  <title>Happy Birthday, Marion 🌹</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page-birthday">
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <button class="music-toggle is-muted" id="musicToggle" type="button"
+          aria-label="Play background music" aria-pressed="false">
+    <span class="music-icon" aria-hidden="true">♪</span>
+  </button>
+
+  <!-- ============ HERO ============ -->
+  <header class="b-hero">
+    <h1 class="b-title">
+      <span class="b-title-top">Happy Birthday,</span>
+      <span class="b-name her-name">Ms.Mburu</span>
+    </h1>
+    <p class="b-lede">Today is all about you. Settle in — I have a few things to show you.</p>
+    <button class="btn-soft" id="celebrateBtn" type="button">Throw some confetti 🎉</button>
+    <a class="scroll-cue" href="#letter" aria-label="Scroll down to your letter">
+      <span aria-hidden="true">⌄</span>
+    </a>
+  </header>
+
+  <main>
+    <!-- ============ LOVE LETTER (typing animation) ============ -->
+    <section class="section" id="letter">
+      <div class="letter reveal" id="letterCard" title="Tap to read it all at once">
+        <h2 class="letter-heading">For you, <span class="her-name">[Her Name]</span></h2>
+        <p class="letter-body" id="typedNote" aria-live="off"></p>
+
+        <!-- ✏️ EDIT YOUR LOVE NOTE HERE. Blank lines become paragraph breaks. -->
+        <template id="loveNote">My love,
+
+Today the world and my world got a little softer and brighter. As my woman here is turning a year older.
+
+Thank you for the quiet mornings, the inside jokes, and the way you make an ordinary day feel like something worth keeping. Even when we argue haha.
+
+I hope this year is gentle with you and generous to you and I promise to be there as you blow another candle.
+
+Always yours,</template>
+      </div>
+    </section>
+
+    <!-- ============ POLAROID MEMORIES ============ -->
+    <section class="section" id="memories">
+      <h2 class="section-title reveal">Little moments I keep</h2>
+      <p class="section-sub reveal">Some of my favorite pages from us.</p>
+
+      <div class="polaroids">
+        <!-- ✏️ Swap the photos in assets/images/ (keep the same file names) and edit the captions. -->
+        <figure class="polaroid tilt-left reveal">
+          <div class="polaroid-photo">
+            <img src="assets/images/photo1.jpg" alt="A favorite photo of us" loading="lazy" />
+          </div>
+          <figcaption>The day I knew</figcaption>
+        </figure>
+
+        <figure class="polaroid tilt-right reveal">
+          <div class="polaroid-photo">
+            <img src="assets/images/photo2.jpg" alt="Another favorite photo of us" loading="lazy" />
+          </div>
+          <figcaption>Our best adventure</figcaption>
+        </figure>
+
+        <figure class="polaroid tilt-left-small reveal">
+          <div class="polaroid-photo">
+            <img src="assets/images/photo3.jpg" alt="A happy memory together" loading="lazy" />
+          </div>
+          <figcaption>Just us, being us</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ REASONS I LOVE YOU (flip cards) ============ -->
+    <section class="section" id="reasons">
+      <h2 class="section-title reveal">Reasons I love you</h2>
+      <p class="section-sub reveal">Tap a heart to turn it over.</p>
+
+      <div class="cards">
+        <!-- ✏️ Edit each front title and back message. Add or remove cards freely. -->
+        <button class="flip-card reveal" type="button" aria-pressed="false">
+          <span class="flip-inner">
+            <span class="flip-face flip-front"><span class="flip-heart" aria-hidden="true">♥</span><span class="flip-label">Your laugh</span></span>
+            <span class="flip-face flip-back">It's my favorite sound in the whole world, and I'd do almost anything to hear it again.</span>
+          </span>
+        </button>
+
+        <button class="flip-card reveal" type="button" aria-pressed="false">
+          <span class="flip-inner">
+            <span class="flip-face flip-front"><span class="flip-heart" aria-hidden="true">♥</span><span class="flip-label">Your kindness</span></span>
+            <span class="flip-face flip-back">You care for people so quietly and so completely. I get to watch it every day.</span>
+          </span>
+        </button>
+
+        <button class="flip-card reveal" type="button" aria-pressed="false">
+          <span class="flip-inner">
+            <span class="flip-face flip-front"><span class="flip-heart" aria-hidden="true">♥</span><span class="flip-label">Our little rituals</span></span>
+            <span class="flip-face flip-back">The small things only we do. They're my favorite part of every week.</span>
+          </span>
+        </button>
+
+        <button class="flip-card reveal" type="button" aria-pressed="false">
+          <span class="flip-inner">
+            <span class="flip-face flip-front"><span class="flip-heart" aria-hidden="true">♥</span><span class="flip-label">How safe I feel</span></span>
+            <span class="flip-face flip-back">Next to you, the world gets quiet and I finally feel like I can breathe.</span>
+          </span>
+        </button>
+
+        <button class="flip-card reveal" type="button" aria-pressed="false">
+          <span class="flip-inner">
+            <span class="flip-face flip-front"><span class="flip-heart" aria-hidden="true">♥</span><span class="flip-label">Your smile</span></span>
+            <span class="flip-face flip-back">It can turn my worst day around before you've even said a word.</span>
+          </span>
+        </button>
+
+        <button class="flip-card reveal" type="button" aria-pressed="false">
+          <span class="flip-inner">
+            <span class="flip-face flip-front"><span class="flip-heart" aria-hidden="true">♥</span><span class="flip-label">Who I am with you</span></span>
+            <span class="flip-face flip-back">I like the person I am when I'm with you. Thank you for that.</span>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ============ BIRTHDAY CAKE (interactive) ============ -->
+    <section class="section cake-section" id="wish">
+      <h2 class="section-title reveal">Make a wish</h2>
+      <p class="section-sub reveal" id="cakeHint">Close your eyes, then blow out the candles.</p>
+
+      <div class="cake reveal" id="cake">
+        <svg class="cake-svg" viewBox="0 0 240 250" role="img" aria-label="A birthday cake with three lit candles">
+          <defs>
+            <linearGradient id="gTier1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#E5ABAE" /><stop offset="1" stop-color="#D89A9E" />
+            </linearGradient>
+            <linearGradient id="gTier2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#FBE3E1" /><stop offset="1" stop-color="#F4D7D7" />
+            </linearGradient>
+            <radialGradient id="gFlame" cx="50%" cy="68%" r="60%">
+              <stop offset="0" stop-color="#FFF6D8" />
+              <stop offset=".55" stop-color="#FFC98A" />
+              <stop offset="1" stop-color="#E88A6A" stop-opacity=".9" />
+            </radialGradient>
+            <filter id="blur6"><feGaussianBlur stdDeviation="6" /></filter>
+          </defs>
+
+          <ellipse cx="120" cy="229" rx="106" ry="11" fill="#6F2C3B" opacity=".16" />
+
+          <!-- bottom tier -->
+          <rect x="24" y="160" width="192" height="68" rx="14" fill="url(#gTier1)" />
+          <g fill="#FFF6F4">
+            <rect x="24" y="158" width="192" height="9" />
+            <circle cx="38" cy="168" r="11" /><circle cx="60" cy="170" r="11" /><circle cx="82" cy="168" r="11" />
+            <circle cx="104" cy="171" r="11" /><circle cx="126" cy="168" r="11" /><circle cx="148" cy="170" r="11" />
+            <circle cx="170" cy="168" r="11" /><circle cx="192" cy="171" r="11" /><circle cx="206" cy="168" r="10" />
+          </g>
+          <g fill="#B04A5A" opacity=".8">
+            <circle cx="52" cy="204" r="4" /><circle cx="92" cy="210" r="4" /><circle cx="132" cy="204" r="4" />
+            <circle cx="172" cy="210" r="4" /><circle cx="198" cy="203" r="3.5" />
+          </g>
+
+          <!-- top tier -->
+          <rect x="56" y="102" width="128" height="60" rx="12" fill="url(#gTier2)" />
+          <g fill="#FFF6F4">
+            <rect x="56" y="100" width="128" height="8" />
+            <circle cx="68" cy="109" r="10" /><circle cx="88" cy="111" r="10" /><circle cx="108" cy="109" r="10" />
+            <circle cx="128" cy="112" r="10" /><circle cx="148" cy="109" r="10" /><circle cx="168" cy="111" r="10" />
+          </g>
+          <path d="M82 140 q8 -12 16 0 q8 12 16 0" fill="none" stroke="#B04A5A" stroke-width="3" stroke-linecap="round" opacity=".7" />
+          <path d="M122 140 q8 -12 16 0" fill="none" stroke="#B04A5A" stroke-width="3" stroke-linecap="round" opacity=".7" />
+
+          <!-- candles -->
+          <g>
+            <rect x="86" y="66" width="9" height="40" rx="3" fill="#FFF6F4" />
+            <rect x="86" y="74" width="9" height="5" fill="#B04A5A" opacity=".75" /><rect x="86" y="88" width="9" height="5" fill="#B04A5A" opacity=".75" />
+            <rect x="115.5" y="62" width="9" height="44" rx="3" fill="#FFF6F4" />
+            <rect x="115.5" y="70" width="9" height="5" fill="#D89A9E" /><rect x="115.5" y="86" width="9" height="5" fill="#D89A9E" />
+            <rect x="145" y="66" width="9" height="40" rx="3" fill="#FFF6F4" />
+            <rect x="145" y="74" width="9" height="5" fill="#B04A5A" opacity=".75" /><rect x="145" y="88" width="9" height="5" fill="#B04A5A" opacity=".75" />
+          </g>
+
+          <!-- flames + glows -->
+          <g class="glows">
+            <circle class="glow" cx="90.5" cy="54" r="20" fill="#FFC98A" opacity=".45" filter="url(#blur6)" />
+            <circle class="glow" cx="120" cy="50" r="22" fill="#FFC98A" opacity=".5" filter="url(#blur6)" />
+            <circle class="glow" cx="149.5" cy="54" r="20" fill="#FFC98A" opacity=".45" filter="url(#blur6)" />
+          </g>
+          <g class="flames">
+            <ellipse class="flame f1" cx="90.5" cy="56" rx="6" ry="10" fill="url(#gFlame)" />
+            <ellipse class="flame f2" cx="120" cy="52" rx="6.5" ry="11" fill="url(#gFlame)" />
+            <ellipse class="flame f3" cx="149.5" cy="56" rx="6" ry="10" fill="url(#gFlame)" />
+          </g>
+        </svg>
+      </div>
+
+      <button class="btn-glow" id="blowBtn" type="button">Blow out the candles 🕯️</button>
+    </section>
+  </main>
+
+  <!-- ============ CLOSING ============ -->
+  <footer class="closing">
+    <p class="closing-line reveal">Happy birthday, my love.</p>
+    <p class="closing-sign reveal">— <span class="your-name">[Your Name]</span></p>
+    <a class="back-link" href="index.html" data-transition>Read it again from the start</a>
+  </footer>
+
+  <div class="page-veil" aria-hidden="true"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
